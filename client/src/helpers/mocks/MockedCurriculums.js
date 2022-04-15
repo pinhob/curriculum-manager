@@ -55,5 +55,42 @@ export const MockedCurriculums = [
         end_date: "2019/12/01",
       },
     ]
+  },
+  {
+    name: "Rogerio Silva",
+    phone: "11999999999",
+    email: "rsilva@gmail.com",
+    role: "Desenvolvedor Back-end",
+    city: "Boa Vista",
+    state: "RR",
+    profiles: {
+      linkedin: "#",
+      github: "#",
+    },
+    presentation: "Elit esse adipisicing pariatur incididunt commodo incididunt reprehenderit dolore incididunt nostrud. Et consequat magna laborum ipsum Lorem labore. Ut sint officia sint ea eiusmod sunt.",
+    education: [
+      {
+        course: "Ciência da Computação",
+        type: "Graduação",
+        instituion: "UFFRR",
+        end_date: "2021/12/31",
+      },
+    ],
+    work: [
+      {
+        role: "Desenvolvedor Back-end",
+        company: "Minim nisi",
+        start_date: "2022/05/01",
+        end_date: "2022/04/01",
+        still_employed: false,
+      },
+    ],
+    stacks: ["JavaScript", "TypeScript", "Elixir", "Node"],
+    languages: [
+      {
+        language: "Inglês",
+        level: "Intermediário",
+      },
+    ],
   }
 ];

@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { MockedCurriculums } from '../../helpers/mocks/MockedCurriculums';
 import Curriculums from './Curriculums';
 
 describe('Curriculums', () => {
@@ -20,5 +21,13 @@ describe('Curriculums', () => {
     expect(name).toBeInTheDocument();
     expect(role).toBeInTheDocument();
     expect(firstStack).toBeInTheDocument();
-  })
+  });
+
+  it(`should render ${MockedCurriculums.length} curriculums`, () => {
+    render(<Curriculums />);
+
+    const curriculums = screen.getAllByRole('article');
+
+    expect(curriculums.length).toBe(MockedCurriculums.length);
+  });
 });
