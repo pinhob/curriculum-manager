@@ -1,6 +1,10 @@
+import { MockedCurriculums } from "../../helpers/mocks/MockedCurriculums";
+
 const Curriculums = () => {
   return (
-    <h1>Currículos</h1>
+    <div>
+      <h1>Currículos</h1>
+    </div>
   )
 };
 
