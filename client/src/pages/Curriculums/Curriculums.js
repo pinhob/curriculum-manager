@@ -14,13 +14,13 @@ const Curriculums = () => {
 
       {
         curriculums.map((curriculum, index) => (
-          <div key={index}>
+          <article key={index}>
             <h2>{curriculum.name}</h2>
             <h3>{curriculum.role}</h3>
             <ul>
               {curriculum.stacks.map((stack, index) => (<li key={index}>{stack}</li>))}
             </ul>
-          </div>
+          </article>
         ))
       }
     </main>
