@@ -1,10 +1,25 @@
 import { MockedCurriculums } from "../../helpers/mocks/MockedCurriculums";
+import { useState, useEffect } from "react";
 
 const Curriculums = () => {
+  const [curriculums, setCurriculums] = useState([]);
+
+  useEffect(() => {
+    setCurriculums(MockedCurriculums);
+  }, []);
+
   return (
-    <div>
+    <main>
       <h1>Currículos</h1>
-    </div>
+
+      {
+        curriculums.map((curriculum, index) => (
+          <div key={index}>
+            <h2>{curriculum.name}</h2>
+          </div>
+        ))
+      }
+    </main>
   )
 };
 
