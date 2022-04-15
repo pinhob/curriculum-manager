@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { MockedCurriculums } from '../../helpers/mocks/MockedCurriculums';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Curriculums from './Curriculums';
 
 describe('Curriculums', () => {
   it('should render title', () => {
-    render(<Curriculums />);
+    render(<Router><Curriculums /></Router>);
 
     const title = screen.getByText(/currículos/i);
 
@@ -12,7 +13,7 @@ describe('Curriculums', () => {
   });
 
   it('should render first curriculum', () => {
-    render(<Curriculums />);
+    render(<Router><Curriculums /></Router>);
 
     const name = screen.getByText(/bruno/i);
     const role = screen.getAllByText(/desenvolvedor/i)[0];
@@ -24,7 +25,7 @@ describe('Curriculums', () => {
   });
 
   it(`should render ${MockedCurriculums.length} curriculums`, () => {
-    render(<Curriculums />);
+    render(<Router><Curriculums /></Router>);
 
     const curriculums = screen.getAllByRole('article');
 
@@ -32,9 +33,9 @@ describe('Curriculums', () => {
   });
 
   it('should have "Ver currículo" button', () => {
-    render(<Curriculums />);
+    render(<Router><Curriculums /></Router>);
 
-    const button = screen.getByText(/ver currículo/i);
+    const button = screen.queryAllByRole('link', { name: /ver currículo/i })[0];
 
     expect(button).toBeInTheDocument();
   })
