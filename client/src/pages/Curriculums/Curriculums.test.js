@@ -15,8 +15,8 @@ describe('Curriculums', () => {
     render(<Curriculums />);
 
     const name = screen.getByText(/bruno/i);
-    const role = screen.getByText(/desenvolvedor/i);
-    const firstStack = screen.getByText(/javascript/i);
+    const role = screen.getAllByText(/desenvolvedor/i)[0];
+    const firstStack = screen.getAllByText(/javascript/i)[0];
 
     expect(name).toBeInTheDocument();
     expect(role).toBeInTheDocument();
