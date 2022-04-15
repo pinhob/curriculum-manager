@@ -30,4 +30,12 @@ describe('Curriculums', () => {
 
     expect(curriculums.length).toBe(MockedCurriculums.length);
   });
+
+  it('should have "Ver currículo" button', () => {
+    render(<Curriculums />);
+
+    const button = screen.getByText(/ver currículo/i);
+
+    expect(button).toBeInTheDocument();
+  })
 });
