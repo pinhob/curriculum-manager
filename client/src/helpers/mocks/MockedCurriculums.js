@@ -1,5 +1,6 @@
 export const MockedCurriculums = [
   {
+    id: 1,
     name: "Bruno Pinho de Freitas",
     phone: "11948246025",
     email: "brunopinho@outlook.com",
@@ -57,6 +58,7 @@ export const MockedCurriculums = [
     ]
   },
   {
+    id: 2,
     name: "Rogerio Silva",
     phone: "11999999999",
     email: "rsilva@gmail.com",
