@@ -9,4 +9,12 @@ describe('Curriculums', () => {
 
     expect(title).toBeInTheDocument();
   });
+
+  it('should render first curriculum', () => {
+    render(<Curriculums />);
+
+    const curriculum = screen.getByText(/bruno/i);
+
+    expect(curriculum).toBeInTheDocument();
+  })
 });
