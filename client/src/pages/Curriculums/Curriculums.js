@@ -1,6 +1,8 @@
 import { MockedCurriculums } from "../../helpers/mocks/MockedCurriculums";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import AddCurriculumButton from '../../components/AddCurriculumButton';
+
 const Curriculums = () => {
   const [curriculums, setCurriculums] = useState([]);
 
@@ -24,6 +26,8 @@ const Curriculums = () => {
           </article>
         ))
       }
+
+      <AddCurriculumButton />
     </main>
   )
 };

@@ -43,7 +43,7 @@ describe('Curriculums', () => {
   it('should have "Adicionar currículo" button', () => {
     render(<Router><Curriculums /></Router>);
 
-    const button = screen.queryByRole('link', { name: /Adicionar Currículo/i })[0];
+    const button = screen.getByText(/Adicionar Currículo/i);
 
     expect(button).toBeInTheDocument();
   })
