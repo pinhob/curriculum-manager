@@ -11,6 +11,8 @@ export const NewCurriculumForm = () => {
   }
 
   const onSubmit = (data) => {
+    const curriculumsList = JSON.parse(localStorage.getItem('curriculums'));
+
     const formatedCurriculum = {
       id: MockedCurriculums.length + 1,
       name: data.name,
@@ -50,9 +52,9 @@ export const NewCurriculumForm = () => {
       }],
     }
 
-    MockedCurriculums.push(formatedCurriculum);
+    curriculumsList.push(formatedCurriculum);
 
-    console.log(MockedCurriculums);
+    localStorage.setItem('curriculums', JSON.stringify(curriculumsList));
   }
 
   return (
@@ -154,7 +156,7 @@ export const NewCurriculumForm = () => {
           cols="30"
           rows="10"
           placeholder="Fale um pouco sobre você e o que sabe"
-          {...register('presentation', { required: true, minLength: 10, maxLength: 250 })}
+          {...register('presentation', { required: true, minLength: 10, maxLength: 500 })}
         />
       </label>
 
@@ -290,7 +292,7 @@ export const NewCurriculumForm = () => {
           name="activity"
           id="activity"
           placeholder="Informe a atividade"
-          {...register('other_experiences_role', { required: true, minLength: 2, maxLength: 40 })}
+          {...register('other_experiences_role', { required: false, minLength: 2, maxLength: 40 })}
         />
       </label>
       {/* TODO: Corrigir chave errada (instituion) no mock */}
@@ -301,7 +303,7 @@ export const NewCurriculumForm = () => {
           name="institution"
           id="institution"
           placeholder="Informe a instituição"
-          {...register('other_experiences_institution', { required: true, minLength: 2, maxLength: 40 })}
+          {...register('other_experiences_institution', { required: false, minLength: 2, maxLength: 40 })}
         />
       </label>
       <label htmlFor="start_date">
@@ -310,7 +312,7 @@ export const NewCurriculumForm = () => {
           type="date"
           name="start_date"
           id="start_date"
-          {...register('other_experiences_start_date', { required: true })}
+          {...register('other_experiences_start_date', { required: false })}
         />
       </label>
       <label htmlFor="end_date">
@@ -319,7 +321,7 @@ export const NewCurriculumForm = () => {
           type="date"
           name="end_date"
           id="end_date"
-          {...register('other_experiences_end_date', { required: true })}
+          {...register('other_experiences_end_date', { required: false })}
         />
       </label>
       <button type="submit">Adicionar</button>

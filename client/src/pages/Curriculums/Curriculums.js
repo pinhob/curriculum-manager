@@ -7,7 +7,15 @@ const Curriculums = () => {
   const [curriculums, setCurriculums] = useState([]);
 
   useEffect(() => {
-    setCurriculums(MockedCurriculums);
+    const curriculumsList = JSON.parse(localStorage.getItem('curriculums'));
+
+    if (!curriculumsList) {
+      localStorage.setItem('curriculums', JSON.stringify(MockedCurriculums));
+    }
+
+    setCurriculums(curriculumsList);
+
+    console.log(curriculumsList);
   }, []);
 
   return (

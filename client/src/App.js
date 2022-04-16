@@ -1,12 +1,10 @@
 import { Switch, Route } from 'react-router-dom';
-import { MockedCurriculums } from "./helpers/mocks/MockedCurriculums";
 import Curriculums from './pages/Curriculums';
 import Curriculum from './pages/Curriculum';
 import NewCurriculum from './pages/NewCurriculum';
 import './App.css';
 
 function App() {
-  console.log('App', MockedCurriculums);
   return (
     <div>
       <Switch>

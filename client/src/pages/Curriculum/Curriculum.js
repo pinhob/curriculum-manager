@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { MockedCurriculums } from "../../helpers/mocks/MockedCurriculums";
-import { formatPhoneNumber } from "../../helpers";
 
 const Curriculum = () => {
   const [curriculum, setCurriculum] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    const findCurriculum = MockedCurriculums.find((curriculum) => curriculum.id === Number(id));
+    const curriculumsList = JSON.parse(localStorage.getItem('curriculums'));
+    const findCurriculum = curriculumsList.find((curriculum) => curriculum.id === Number(id));
     setCurriculum(findCurriculum);
   }, [id])
 
@@ -29,7 +28,7 @@ const Curriculum = () => {
 
       <h2>Contato e informações</h2>
       <p>{curriculum.email}</p>
-      <p>{formatPhoneNumber(curriculum.phone)}</p>
+      <p>{curriculum.phone}</p>
       <p>{curriculum.city} - {curriculum.state}</p>
 
       <h2>Perfil profissional</h2>
