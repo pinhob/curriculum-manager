@@ -2,7 +2,7 @@ export const MockedCurriculums = [
   {
     id: 1,
     name: "Bruno Pinho de Freitas",
-    phone: "11948246025",
+    phone: "(11) 94824-6025",
     email: "brunopinho@outlook.com",
     role: "Desenvolvedor Front-end",
     city: "São Paulo",
@@ -16,13 +16,13 @@ export const MockedCurriculums = [
       {
         course: "Desenvolvimento Web",
         type: "Bootcamp",
-        instituion: "Trybe",
+        institution: "Trybe",
         end_date: "2022/05/13",
       },
       {
         course: "Jornalismo",
         type: "Graduação",
-        instituion: "UNIP",
+        institution: "UNIP",
         end_date: "2020/06/31",
       },
     ],
@@ -51,7 +51,7 @@ export const MockedCurriculums = [
     others_experiences: [
       {
         role: "Voluntário",
-        instituion: "SP Invisível",
+        institution: "SP Invisível",
         start_date: "2016/02/01",
         end_date: "2019/12/01",
       },
@@ -59,10 +59,10 @@ export const MockedCurriculums = [
   },
   {
     id: 2,
-    name: "Rogerio Silva",
-    phone: "11999999999",
+    name: "Laura Marques",
+    phone: "(11) 99999-9999",
     email: "rsilva@gmail.com",
-    role: "Desenvolvedor Back-end",
+    role: "Desenvolvedora Back-end",
     city: "Boa Vista",
     state: "RR",
     profiles: {
@@ -74,7 +74,7 @@ export const MockedCurriculums = [
       {
         course: "Ciência da Computação",
         type: "Graduação",
-        instituion: "UFFRR",
+        institution: "UFFRR",
         end_date: "2021/12/31",
       },
     ],
@@ -82,7 +82,7 @@ export const MockedCurriculums = [
       {
         role: "Desenvolvedor Back-end",
         company: "Minim nisi",
-        start_date: "2022/05/01",
+        start_date: "2020/05/01",
         end_date: "2022/04/01",
         still_employed: false,
       },
@@ -91,8 +91,58 @@ export const MockedCurriculums = [
     languages: [
       {
         language: "Inglês",
-        level: "Intermediário",
+        level: "Fluente",
       },
     ],
+  },
+  {
+    id: 3,
+    name: "Rogerio Silva",
+    phone: "(11) 99999-9999",
+    email: "laura@gmail.com",
+    role: "QA Analyst",
+    city: "Porto Alegre",
+    state: "RS",
+    profiles: {
+      linkedin: "#",
+      github: "#"
+    },
+    presentation: "Officia labore tempor esse do ullamco elit aliquip nulla. Deserunt occaecat mollit elit labore culpa sunt consequat. Id pariatur cupidatat sunt quis est nisi sunt culpa cupidatat commodo culpa. Fugiat culpa nisi mollit ",
+    education: [
+      {
+        "course": "Análise e Desenvolvimento de Sistemas",
+        "type": "Graduação",
+        "end_date": "2021-11-31"
+      }
+    ],
+    work: [
+      {
+        "role": "QA Analyst",
+        "company": "Alura",
+        "start_date": "2022-01-05",
+        "end_date": "",
+        "still_employed": true
+      }
+    ],
+    stacks: [
+      "Jest",
+      "RTL",
+      "Mocha",
+      "Chai"
+    ],
+    languages: [
+      {
+        "language": "Inglês",
+        "level": "Intermediário"
+      }
+    ],
+    other_experiences: [
+      {
+        "role": "Voluntário",
+        "institution": "ONG Lorem",
+        "start_date": "2022-04-05",
+        "end_date": "2022-04-22"
+      }
+    ]
   }
 ];
