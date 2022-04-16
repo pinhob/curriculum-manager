@@ -1,6 +1,11 @@
-import { brazilianStates } from "../helpers";
+import { brazilianStates, formatPhoneNumber } from "../helpers";
 
 export const NewCurriculumForm = () => {
+  const handlePhoneNumber = ({ target }) => {
+    const phoneFormatted = formatPhoneNumber(target.value);
+    target.value = phoneFormatted;
+  }
+
   return (
     <form>
       <h2>Informações pessoais</h2>
@@ -18,7 +23,7 @@ export const NewCurriculumForm = () => {
       </label>
       <label htmlFor="phone">
         Telefone:
-        <input type="text" name="phone" id="phone" placeholder="Informe seu telefone" />
+        <input type="text" name="phone" id="phone" placeholder="Informe seu telefone" onChange={handlePhoneNumber} />
       </label>
       <label htmlFor="city">
         Cidade:

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { MockedCurriculums } from "../../helpers/mocks/MockedCurriculums";
+import { formatPhoneNumber } from "../../helpers";
 
 const Curriculum = () => {
   const [curriculum, setCurriculum] = useState({});
@@ -28,7 +29,7 @@ const Curriculum = () => {
 
       <h2>Contato e informações</h2>
       <p>{curriculum.email}</p>
-      <p>{curriculum.phone}</p>
+      <p>{formatPhoneNumber(curriculum.phone)}</p>
       <p>{curriculum.city} - {curriculum.state}</p>
 
       <h2>Perfil profissional</h2>
