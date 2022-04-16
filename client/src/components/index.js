@@ -1,0 +1,1 @@
+export { NewCurriculumForm } from './NewCurriculumForm';
