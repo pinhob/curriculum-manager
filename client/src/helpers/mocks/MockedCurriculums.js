@@ -41,7 +41,7 @@ export const MockedCurriculums = [
         still_employed: false,
       },
     ],
-    stacks: ["JavaScript", "HTML", "CSS", "React", "Node", "Express"],
+    stacks: ["React", "CSS", "Node"],
     languages: [
       {
         language: "Inglês",
@@ -87,7 +87,7 @@ export const MockedCurriculums = [
         still_employed: false,
       },
     ],
-    stacks: ["JavaScript", "TypeScript", "Elixir", "Node"],
+    stacks: ["TypeScript", "Elixir", "Node"],
     languages: [
       {
         language: "Inglês",
@@ -128,7 +128,6 @@ export const MockedCurriculums = [
       "Jest",
       "RTL",
       "Mocha",
-      "Chai"
     ],
     languages: [
       {
