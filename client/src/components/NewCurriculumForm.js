@@ -1,9 +1,11 @@
 import { brazilianStates, formatPhoneNumber } from "../helpers";
 import { MockedCurriculums } from "../helpers";
 import { useForm } from 'react-hook-form';
+import { useNavigate } from "react-router";
 
 const NewCurriculumForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const navigate = useNavigate();
 
   const handlePhoneNumber = ({ target }) => {
     const phoneFormatted = formatPhoneNumber(target.value);
@@ -55,6 +57,8 @@ const NewCurriculumForm = () => {
     curriculumsList.push(formatedCurriculum);
 
     localStorage.setItem('curriculums', JSON.stringify(curriculumsList));
+
+    navigate('/');
   }
 
   return (
