@@ -58,7 +58,7 @@ export const NewCurriculumForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="form">
       <h2>Informações pessoais</h2>
       <label htmlFor="name">
         Nome:
@@ -67,6 +67,7 @@ export const NewCurriculumForm = () => {
           name="name"
           id="name"
           placeholder="Informe seu nome"
+          className="form__text__input"
           {...register('name', { required: true, minLength: 3, maxLength: 80 })}
         />
       </label>
@@ -78,6 +79,7 @@ export const NewCurriculumForm = () => {
           name="role"
           id="role"
           placeholder="Informe seu função"
+          className="form__text__input"
           {...register('role', { required: true, minLength: 3, maxLength: 40 })}
         />
       </label>
@@ -88,6 +90,7 @@ export const NewCurriculumForm = () => {
           name="email"
           id="email"
           placeholder="Informe seu email"
+          className="form__text__input"
           {...register('email', { required: true, minLength: 3, maxLength: 40 })}
         />
       </label>
@@ -98,6 +101,7 @@ export const NewCurriculumForm = () => {
           name="phone"
           id="phone"
           placeholder="Informe seu telefone"
+          className="form__text__input"
           {...register('phone', {
             required: true,
             minLength: 15,
@@ -113,6 +117,7 @@ export const NewCurriculumForm = () => {
           name="city"
           id="city"
           placeholder="Informe sua cidade"
+          className="form__text__input"
           {...register('city', { required: true, minLength: 3, maxLength: 30 })}
         />
       </label>
@@ -133,6 +138,7 @@ export const NewCurriculumForm = () => {
           name="linkedin"
           id="linkedin"
           placeholder="Link para seu Linkedin"
+          className="form__text__input"
           {...register('profile_linkedin', { required: true })}
         />
       </label>
@@ -143,6 +149,7 @@ export const NewCurriculumForm = () => {
           name="github"
           id="github"
           placeholder="Link para seu Github"
+          className="form__text__input"
           {...register('profile_github', { required: true })}
         />
       </label>
@@ -168,6 +175,7 @@ export const NewCurriculumForm = () => {
           name="course"
           id="course"
           placeholder="Informe o curso"
+          className="form__text__input"
           {...register('education_course', { required: true, minLength: 2, maxLength: 40 })}
         />
       </label>
@@ -187,6 +195,7 @@ export const NewCurriculumForm = () => {
           name="instituion"
           id="instituion"
           placeholder="Informe o nome da instituição"
+          className="form__text__input"
           {...register('education_institution', { required: true, minLength: 2, maxLength: 40 })}
         />
       </label>
@@ -209,6 +218,7 @@ export const NewCurriculumForm = () => {
           name="role"
           id="role"
           placeholder="Informe o cargo"
+          className="form__text__input"
           {...register('job_role', { required: true, minLength: 2, maxLength: 40 })}
         />
       </label>
@@ -219,6 +229,7 @@ export const NewCurriculumForm = () => {
           name="company"
           id="company"
           placeholder="Informe o nome da empresa"
+          className="form__text__input"
           {...register('job_company', { required: true, minLength: 2, maxLength: 40 })}
         />
       </label>
@@ -271,6 +282,7 @@ export const NewCurriculumForm = () => {
           name="language"
           id="language"
           placeholder="Informe a linguagem"
+          className="form__text__input"
           {...register('languages_language')}
         />
       </label>
@@ -292,6 +304,7 @@ export const NewCurriculumForm = () => {
           name="activity"
           id="activity"
           placeholder="Informe a atividade"
+          className="form__text__input"
           {...register('other_experiences_role', { required: false, minLength: 2, maxLength: 40 })}
         />
       </label>
@@ -303,6 +316,7 @@ export const NewCurriculumForm = () => {
           name="institution"
           id="institution"
           placeholder="Informe a instituição"
+          className="form__text__input"
           {...register('other_experiences_institution', { required: false, minLength: 2, maxLength: 40 })}
         />
       </label>
@@ -324,7 +338,7 @@ export const NewCurriculumForm = () => {
           {...register('other_experiences_end_date', { required: false })}
         />
       </label>
-      <button type="submit">Adicionar</button>
+      <button type="submit" className="form__btn">Adicionar</button>
     </form>
   )
 };
