@@ -23,9 +23,10 @@ const StyledNewCurriculum = styled.main`
   .form label {
     display: flex;
     flex-flow: column;
+    font-size: 1.2rem;
+    font-weight: 500;
     gap: 0.5rem;
     margin: 0.5rem 0;
-    font-size: 1.2rem;
   }
 
   .form__text__input {
