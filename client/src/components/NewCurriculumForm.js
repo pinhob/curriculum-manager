@@ -2,6 +2,7 @@ import { brazilianStates, formatPhoneNumber } from "../helpers";
 import { MockedCurriculums } from "../helpers";
 import { useForm } from 'react-hook-form';
 import { useNavigate } from "react-router";
+import moment from 'moment';
 
 const NewCurriculumForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -210,6 +211,7 @@ const NewCurriculumForm = () => {
           name="end_date"
           id="end_date"
           placeholder="Informe a data de término"
+          max={moment().format("YYYY-MM-DD")}
           {...register('education_end_date', { required: true })}
         />
       </label>
@@ -243,6 +245,7 @@ const NewCurriculumForm = () => {
           type="date"
           name="start_date"
           id="start_date"
+          max={moment().format("YYYY-MM-DD")}
           {...register('job_start_date', { required: true })}
         />
       </label>
@@ -261,6 +264,7 @@ const NewCurriculumForm = () => {
           type="date"
           name="end_date"
           id="end_date"
+          max={moment().format("YYYY-MM-DD")}
           {...register('job_end_date', { required: false })}
         />
       </label>
@@ -330,6 +334,7 @@ const NewCurriculumForm = () => {
           type="date"
           name="start_date"
           id="start_date"
+          max={moment().format("YYYY-MM-DD")}
           {...register('other_experiences_start_date', { required: false })}
         />
       </label>
@@ -339,6 +344,7 @@ const NewCurriculumForm = () => {
           type="date"
           name="end_date"
           id="end_date"
+          max={moment().format("YYYY-MM-DD")}
           {...register('other_experiences_end_date', { required: false })}
         />
       </label>
