@@ -1,11 +1,11 @@
 import { brazilianStates, formatPhoneNumber } from "../helpers";
-import { MockedCurriculums, formatDataToCurriculumFormat } from "../helpers";
+import { formatDataToCurriculumFormat } from "../helpers";
 import { useForm } from 'react-hook-form';
 import { useNavigate } from "react-router";
 import moment from 'moment';
 
 const NewCurriculumForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
 
   const handlePhoneNumber = ({ target }) => {
