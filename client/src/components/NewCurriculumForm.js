@@ -2,7 +2,7 @@ import { brazilianStates, formatPhoneNumber } from "../helpers";
 import { MockedCurriculums } from "../helpers";
 import { useForm } from 'react-hook-form';
 
-export const NewCurriculumForm = () => {
+const NewCurriculumForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const handlePhoneNumber = ({ target }) => {
@@ -342,3 +342,5 @@ export const NewCurriculumForm = () => {
     </form>
   )
 };
+
+export default NewCurriculumForm;
