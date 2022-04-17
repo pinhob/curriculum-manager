@@ -1,7 +1,7 @@
 # 🗒️ Sandy&Junior: Gerenciador de currículos de pessoas desenvolvedoras júnior | Desafio Técnico da Ilegra
 ![image](https://user-images.githubusercontent.com/20286747/163733405-8df53f2d-75c1-40e5-80ad-261f15d83a1a.png)
 
-Neste repositório está o **desafio técnico de Front-end da Ilegra**. É uma aplicação de **gerenciamento de currículos que permite que o usuário visualizar e criar currículos na plataforma**.
+Neste repositório está o **desafio técnico de Front-end da Ilegra**. É uma aplicação de **gerenciamento de currículos que permite que o usuário visualize e crie currículos na plataforma**.
 
 ---
 ## Sumário
