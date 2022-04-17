@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "../../components";
 import { StyledCurriculum } from "../../styles";
+import moment from 'moment';
 
 const Curriculum = () => {
   const [curriculum, setCurriculum] = useState({});
@@ -12,8 +13,6 @@ const Curriculum = () => {
     const findCurriculum = curriculumsList.find((curriculum) => curriculum.id === Number(id));
     setCurriculum(findCurriculum);
   }, [id])
-
-  console.log(curriculum)
 
   return (
     <>
@@ -68,7 +67,12 @@ const Curriculum = () => {
                 <h4>{course.course}</h4>
                 <h5 className="card__institution">na <span className="card__instituition__name">{course.institution}</span></h5>
                 {/* TODO: Adicionar lógica para, caso a data seja no futuro, o texto seja "Conclusão em..." */}
-                <p className="card__dates">Concluído em {course.end_date}</p>
+                <p className="card__dates">
+                  {moment() < moment(course.end_date)
+                    ? `Conclusão em ${moment(course.end_date).format('MM/YYYY')}`
+                    : `Concluído em ${moment(course.end_date).format('MM/YYYY')}`
+                  }
+                </p>
               </div>
             ))
           }
@@ -82,7 +86,7 @@ const Curriculum = () => {
               <div key={index} className="card">
                 <h4>{job.role}</h4>
                 <h5 className="card__institution"> na <span className="card__instituition__name">{job.company}</span></h5>
-                <p className="card__dates">{job.start_date} - {job.still_employed ? 'Atualmente' : job.end_date}</p>
+                <p className="card__dates">{moment(job.start_date).format('MM/YYYY')} - {job.still_employed ? 'Atualmente' : moment(job.end_date).format('MM/YYYY')}</p>
               </div>
             ))
           }
@@ -109,7 +113,7 @@ const Curriculum = () => {
               <div key={index} className="card" >
                 <h4>{experience.role}</h4>
                 <h5 className="card__institution">{experience.instituion}</h5>
-                <p className="card__dates">{experience.start_date} - {experience.end_date}</p>
+                <p className="card__dates">{moment(experience.start_date).format('MM/YYYY')} - {moment(experience.end_date).format('MM/YYYY')}</p>
               </div>
             ))
           }
