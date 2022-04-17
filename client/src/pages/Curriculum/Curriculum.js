@@ -93,29 +93,37 @@ const Curriculum = () => {
         </div>
 
         <div className="card__wrapper">
-          <h2 class="title--purple">Idiomas</h2>
           {
             curriculum.languages &&
-            curriculum.languages.map((language, index) => (
-              <div key={index} className="card">
-                <h4>{language.language}</h4>
-                <p className="card__dates">{language.level}</p>
-              </div>
-            ))
+            <>
+              <h2 class="title--purple">Idiomas</h2>
+              {
+                curriculum.languages.map((language, index) => (
+                  <div key={index} className="card">
+                    <h4>{language.language}</h4>
+                    <p className="card__dates">{language.level}</p>
+                  </div>
+                ))
+              }
+            </>
           }
         </div>
 
         <div className="card__wrapper">
-          <h2 className="title--purple">Voluntariado</h2>
           {
             curriculum.others_experiences &&
-            curriculum.others_experiences.map((experience, index) => (
-              <div key={index} className="card" >
-                <h4>{experience.role}</h4>
-                <h5 className="card__institution">{experience.instituion}</h5>
-                <p className="card__dates">{moment(experience.start_date).format('MM/YYYY')} - {moment(experience.end_date).format('MM/YYYY')}</p>
-              </div>
-            ))
+            <>
+              <h2 className="title--purple">Voluntariado</h2>
+              {
+                curriculum.others_experiences.map((experience, index) => (
+                  <div key={index} className="card" >
+                    <h4>{experience.role}</h4>
+                    <h5 className="card__institution">{experience.instituion}</h5>
+                    <p className="card__dates">{moment(experience.start_date).format('MM/YYYY')} - {moment(experience.end_date).format('MM/YYYY')}</p>
+                  </div>
+                ))
+              }
+            </>
           }
         </div>
       </StyledCurriculum>
