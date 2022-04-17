@@ -1,13 +1,14 @@
 import { NewCurriculumForm, Header } from "../../components";
+import { StyledNewCurriculum } from "../../styles";
 
 const NewCurriculum = () => {
   return (
     <>
       <Header />
-      <main>
-        <h1>Adicionar currículo</h1>
+      <StyledNewCurriculum>
+        <h1 className="title">Adicionar currículo</h1>
         <NewCurriculumForm />
-      </main>
+      </StyledNewCurriculum>
     </>
   )
 };
