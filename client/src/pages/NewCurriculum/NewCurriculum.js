@@ -1,12 +1,14 @@
-import { NewCurriculumForm } from "../../components";
+import { NewCurriculumForm, Header } from "../../components";
 
 const NewCurriculum = () => {
   return (
-    <main>
-      <h1>Adicionar currículo</h1>
-
-      <NewCurriculumForm />
-    </main>
+    <>
+      <Header />
+      <main>
+        <h1>Adicionar currículo</h1>
+        <NewCurriculumForm />
+      </main>
+    </>
   )
 };
 
