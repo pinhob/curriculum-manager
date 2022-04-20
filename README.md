@@ -41,6 +41,7 @@ Com isso será descarregado o `node_modules` e todas as dependências.
 ### Rodando o projeto
 Execute o projeto com o comando:
 ```
+cd client
 npm start
 ```
 ### Rodando a suíte de testes
